@@ -21,9 +21,9 @@ namespace PocViseu.Infrastructure.Database
                 wcContext.Add(perfilAutomacao);
 
 
-                //var userStaging = new User() { Username = "viseu", Role = "user", Password = "123456".ToHash(), Email = "viseu@viseu.com.br", NomeCompleto = "Viseu User Profile", CreatedAt = DateTime.Now.AddHours(SysConfig.TMZ) };
-                //var perfilConcessionaria = new UserProfile() { Permissao = "0000F", User = userStaging, CreatedAt = DateTime.Now.AddHours(SysConfig.TMZ) };
-                //wcContext.Add(perfilConcessionaria);
+                var userStaging = new User() { Username = "viseu", Role = "user", Password = "123456".ToHash(), Email = "viseu@viseu.com.br", NomeCompleto = "Viseu User Profile", CreatedAt = DateTime.Now.AddHours(SysConfig.TMZ) };
+                var perfilConcessionaria = new UserProfile() { Permissao = "0000F", User = userStaging, CreatedAt = DateTime.Now.AddHours(SysConfig.TMZ) };
+                wcContext.Add(perfilConcessionaria);
 
 
                 var config = new WebcorpConfig() { ParamKey = "URL_BOT", ParamValue = "https://totvs.PocViseu.com.br:4030", ParamDesc = "Url de acesso a BOT Control Automacao", User = admin, CreatedAt = DateTime.Now.AddHours(SysConfig.TMZ) };
