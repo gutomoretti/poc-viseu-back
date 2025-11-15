@@ -132,6 +132,7 @@ namespace PocViseu.Api
                 new JWTAuthenticationManager(tokenKey, x.GetService<IRefreshTokenGenerator>()));
 
             services.AddSingleton<ILogSystemService, LogSystemService>();
+            services.AddSingleton<IMailService, MailService>();
            
             services.AddHttpClient<IHttpBot, HttpBot>(client =>
             {
